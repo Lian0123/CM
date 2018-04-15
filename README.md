@@ -5,6 +5,12 @@
 ## 版本差異：
  本專案為完整版專案，但已打包好的zip檔是屬於精簡版（無輸出成專有格式的功能）
  已打包好的zip檔不算是MIT LICENSES所包含的範圍
+ 
+## Windows X64精簡版zip：
+ https://goo.gl/q7gy4m
+ 
+## Ubuntu X64精簡版zip：
+ https://goo.gl/YMEA1v
 
 ## 操作模式：
  #### [方法1]直接操作
