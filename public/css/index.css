@@ -1,0 +1,146 @@
+a {
+    font-family: "Microsoft JhengHei";
+    color: #dfa300;
+}
+
+a:hover {
+    font-family: "Microsoft JhengHei";
+    color: #5fca9f;
+}
+
+a:visited {
+    font-family: "Microsoft JhengHei";
+    color: #dfa300;
+}
+
+a.worrog {
+    font-family: "Microsoft JhengHei";
+    color: #df5200;
+}
+
+li {
+    font-size: 14pt;
+}
+
+textarea,
+input,
+option,
+select {
+    color: #001215;
+}
+
+button.None {
+    background-color: rgba(255, 255, 255, 0);
+    border-color: rgba(255, 255, 255, 0);
+}
+
+div.Ti {
+    font-family: "Microsoft JhengHei";
+    text-align: center;
+    color: #cfcfcf;
+}
+
+div.Ti-Left {
+    font-family: "Microsoft JhengHei";
+    text-align: left;
+    color: #cfcfcf;
+}
+
+tr.Ti {
+    background: rgba(255, 210, 143, 0.9);
+    color: rgba(39, 39, 39, 0.9);
+}
+
+.a {
+    color: rgba(255, 15, 20, 0.9);
+    background: rgba(12, 155, 20, 0.1);
+}
+
+.a::after {
+    color: rgb(12, 155, 19);
+}
+
+h1 {
+    font-family: "Microsoft JhengHei";
+    font-size: 30pt;
+    block-size: 30pt;
+}
+
+h2 {
+    font-family: "Microsoft JhengHei";
+}
+
+p {
+    font-family: "Microsoft JhengHei";
+}
+
+p.main {
+    font-size: 16pt;
+    text-align: justify;
+    font-family: "Microsoft JhengHei";
+}
+
+hr {
+    color: #001215;
+}
+
+
+/*class*/
+
+div.Left {
+    float: left;
+    overflow: hidden;
+    width: 50%;
+}
+
+div.Right {
+    float: right;
+    overflow: hidden;
+    width: 50%;
+}
+
+div.widit-20-r {
+    float: right;
+    overflow: hidden;
+    width: 20%;
+}
+
+div.widit-20-l {
+    float: left;
+    overflow: hidden;
+    width: 20%;
+}
+
+div.widit-80 {
+    float: none;
+    overflow: hidden;
+    width: 60%;
+}
+
+img.Full {
+    overflow: hidden;
+    border-left: 1px solid #003399;
+    border-right: 1px solid #003399;
+    width: 100%;
+}
+
+div.celi {
+    box-sizing: border-box;
+}
+
+
+div.fu {
+    height: 100%;
+    width: 100%;
+}
+
+div.BTM{
+    position: absolute;
+    top: 95%;
+    left: 0%;
+    right: 0%;
+}
+
+div.BTM a{
+    text-align: center;
+}

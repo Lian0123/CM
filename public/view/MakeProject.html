@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="fixed-width=1000, initial-scale=1.0, maximum-scale=1.0">
+    <script src="../js/include.js"></script>
+    <script src="../js/app.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/jquery-3.3.1.js"></script>
+    <script src="../js/jquery-ui.js"></script>
+    <script src="../js/vue.min.js"></script>
+    <script src="../js/d3.min.js"></script>
+    <script src="../js/c3.min.js"></script>
+
+
+    <link rel="stylesheet" href="../css/app.css">
+    <link rel="stylesheet" href="../css/jquery-ui.css">
+    <link rel="stylesheet" href="../css/MakeProject.css">
+    <link rel="stylesheet" href="../css/OpenProject.css">
+    <link rel="stylesheet" href="../css/c3.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
+    <title>Convolution Machine</title>
+</head>
+
+<body>
+    <div id="TextBoxView">
+        <a class="close" @click="TextBoxViewClose()">[x]</a>
+        <h3>操作指令範例：</h3></br>
+        <p><b>> Set X = 5</b> 使X的範圍為 -5 ~ +5 </p>
+        <p><b>> Set H = 5</b> 使H的範圍為 -5 ~ +5</p>
+        <p><b>> Let X<-1> = 2</b> 使X[-1]陣列的值設為 2</p>
+        <p><b>> Let H<0> = -4</b> 使H[0]陣列的值設為 -4</p>
+        <p><b>> Open X</b> 打開X參數的圖形檢視圖表畫面</p>
+        <p><b>> Open H</b> 打開H參數的圖形檢視圖表畫面</p>
+        <p><b>> Open Y</b> 打開Y參數的圖形檢視圖表畫面</p>
+        <p><b>> Open All</b> 打開x,H參數的圖形檢視圖表畫面</p>
+        <p><b>> Close X</b> 關閉X參數的圖形檢視圖表畫面</p>
+        <p><b>> Close H</b> 關閉H參數的圖形檢視圖表畫面</p>
+        <p><b>> Close Y</b> 關閉Y參數的圖形檢視圖表畫面</p>
+        <p><b>> Close All</b> 關閉所有參數的圖形檢視圖表畫面</p>
+        <p><b>> Reset X</b> 將把X參數的內容與色彩也會重置</p>
+        <p><b>> Reset H</b> 將把H參數的內容與色彩也會重置</p>
+        <p><b>> Reset Y</b> 將把Y參數的色彩也會重置為預設值</p>
+        <p><b>> Reset All</b> 將把X,H參數的內容與X,H,y色彩也會重置</p>
+        <p><b>> help</b> 顯示提示</p>
+        <p><b>> clear</b> 清空終端畫面</p>
+        <p><b>> X</b> 顯示X參數的所有內容（CLI模式）</p>
+        <p><b>> H</b> 顯示X參數的所有內容（CLI模式）</p>
+        <p><b>> Y</b> 顯示X參數的所有內容（CLI模式）</p>
+        <p><b>> All</b> 顯示X參數的所有內容（CLI模式）</p>
+        <p><b>> Color X #000000</b> 設定X圖表的色彩</p>
+        <p><b>> Color H #000000</b> 設定H圖表的色彩</p>
+        <p><b>> Color Y #000000</b> 設定Y圖表的色彩</p>
+        <p><b>> Color All #000000</b> 設定所有圖表的色彩</p>
+        <p><b># 這是註解</b> 輸入註解至終端的語法</p>
+    </div>
+
+    <div id="view" class="Ti">
+        <div class="col-sm-12">
+            <nav class="navbar" role="navigation">
+                
+                <ul class="nav navbar-nav navbar-left">
+                    <li><a href="../../index.html">回到首頁</a></li>
+                </ul>
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a onclick="ConvolutionY.GStart()" href="#">執行專案</a></li>
+                </ul>
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a onclick="Terminal.OutPutFile()" href="#">匯出專案</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="MaTi">
+
+            <div id="Terminal" class="col-sm-12">
+                <div class="CLIview"><p v-for="item in TerminalCounter" >{{TerminalText[item]}}</p><p>{{NowText}}</p></div>
+                <input v-model="NowText" type="text" class="CLIview" @KeyDown="ReadText(event)">
+            </div>
+
+        </div>
+
+        <div id="ConvolutionX" class="col-sm-12">
+            <br><br>
+            <h6>X輸入ˋ</h6>
+            <div class='c3-editor' id='C3ViewX'></div>
+        </div>
+
+        <div id="ConvolutionH" class="col-sm-12">
+            <br><br>
+            <h6>H輸入</h6>
+            <div class='c3-editor' id='C3ViewH'></div>
+        </div>
+
+        <div id="ConvolutionY" class="col-sm-12">
+            <br><br>
+            <h6>Y輸出</h6>
+            <div class='c3-editor' id='C3ViewY'></div>
+        </div>
+    </div>
+</body>
+</html>
+
+<script src="../js/MakeProject.js"></script>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="fixed-width=1000, initial-scale=1.0, maximum-scale=1.0">
+    <script src="../js/include.js"></script>
+    <script src="../js/app.js"></script>
+    <script src="../js/jquery-3.3.1.js"></script>
+    <script src="../js/jquery-ui.js"></script>
+    <script src="../js/vue.min.js"></script>
+    <script src="../js/d3.min.js"></script>
+    <script src="../js/c3.min.js"></script>
+
+
+    <link rel="stylesheet" href="../css/app.css">
+    <link rel="stylesheet" href="../css/jquery-ui.css">
+    <link rel="stylesheet" href="../css/OpenProject.css">
+    <link rel="stylesheet" href="../css/c3.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
+    <title>Convolution Machine</title>
+</head>
+
+<!--frameset cols="25%,75%" frameBorder="0">
+    <frame src="./CtrlData.html" name="menu">
+        <frame src="./ViewData.html" name="cont">
+</frameset-->
+
+<body>
+    <div id="LoadDataView" class="Ti">
+        <div class="col-sm-12">
+            <nav class="navbar" role="navigation">
+                
+                <ul class="nav navbar-nav navbar-left">
+                    <li><a href="../../index.html">回到首頁</a></li>
+                </ul>
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#" @click="Count()">執行專案</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="col-sm-12">
+            <input id="FileIn" @change="ReadFile()" type="file" />
+        </div>
+        <div>
+            <table  width="95%" align="center">
+                <tr class="Ti">
+                    <td>專案名稱</td>
+                    <td>作者</td>
+                    <td>建立時間</td>
+                    <td>更新時間</td>
+                </tr>
+                <hr>
+                <tr>
+                    <td>{{ProjectName}}</td>
+                    <td>{{Who}}</td>
+                    <td>{{MakeTime}}</td>
+                    <td>{{UpdateTime}}</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="col-sm-12">
+            <br><br>
+            <h6>輸出結果</h6>
+            <div class='c3-editor' id='C3View'></div>
+         </div>
+    </div>
+</body>
+
+</html>
+
+
+<script src="../js/OpenProject.js"></script>

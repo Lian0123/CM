@@ -1,0 +1,13 @@
+@ProjectName: Test1
+@Who: Lian0123
+@MakeTime: 2018-4-2
+@UpdateTime: 2018-4-4
+
+** 程式主體 **
+
+#InX: 6
+#InH: 6
+
+ValueX: 0,0,0,0,0,0,1,1,1,0,0,0,0
+
+ValueH: 0,0,0,0,0,0,1,1,1,0,0,0,0

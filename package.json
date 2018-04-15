@@ -1,0 +1,18 @@
+{
+    "name": "ConvolutionMachine",
+    "version": "1.0.0",
+    "description": "asar electron-packager",
+    "main": "main.js",
+    "dependencies": {
+        "electron": "^1.7.5"
+    },
+    "devDependencies": {},
+    "scripts": {
+        "start": "electron main.js",
+        "build_mac": "electron-packager . ConvolutionMachine --platform=darwin --arch=x64 --version=1.7.5 --icon=CM.png --asar=false --ignore=node_modules/electron-* ",
+        "build_win32": "electron-packager . ConvolutionMachine --platform=win32  --arch=x64 --version=2.0.0 --icon=CM.png --asar=false --ignore=node_modules/electron-* ",
+        "build_linux": "electron-packager . ConvolutionMachine --platform=linux --arch=x64 --version=1.7.5 --icon=CM.png --asar=false --ignore=node_modules/electron-* "
+    },
+    "author": "",
+    "license": "MIT"
+}

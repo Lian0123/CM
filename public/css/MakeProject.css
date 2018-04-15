@@ -1,0 +1,40 @@
+div.MaTi{
+    text-align: center;
+}
+
+div.CLIview{
+    background: rgb(19, 19, 19);
+    text-align: left;
+    color: rgb(113, 255, 255);
+    height: 400px;
+    width: 100%;
+}
+
+input.CLIview{
+    background: rgb(19, 19, 19);
+    text-align: left;
+    color: rgb(113, 255, 255);
+    width: 100%;
+    border-style:none;
+}
+
+#TextBoxView{
+    position: absolute;
+    background: #aed384;
+    z-index:5;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    width: 90%;
+    height: 900px;
+}
+
+#TextBoxView p,h3{
+    z-index:6;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
