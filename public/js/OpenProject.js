@@ -125,9 +125,9 @@ var LoadDataView = new Vue({
                 LoadDataView.DotArrayY[l] = 0;
             }
             if(LoadDataView.IsComput==true){
-                for(var n = -LoadDataView.InX;n<=LoadDataView.InX;n++)
+                for(var n = -LoadDataView.OutY;n<=LoadDataView.OutY;n++)
                     for(var k = -LoadDataView.OutY;k<=LoadDataView.OutY;k++)
-                        if(!isNaN(LoadDataView.DotArrayX[n-k])&&!isNaN(LoadDataView.DotArrayX[k])){
+                        if(!isNaN(LoadDataView.DotArrayH[n-k])&&!isNaN(LoadDataView.DotArrayX[k])){
                             LoadDataView.DotArrayY[n]+=LoadDataView.DotArrayX[k] * LoadDataView.DotArrayH[n-k];
                         }
 

@@ -547,7 +547,7 @@ var Terminal = new Vue({
                                         ValueX += ",";
                                     }
                                 }
-                                ValueX += " | From "+ (-ConvolutionH.DotID) +" ~ " + ConvolutionH.DotID ;
+                                ValueX += " | From "+ (-ConvolutionX.DotID) +" ~ " + ConvolutionX.DotID ;
                                 
                                 for (let j = -ConvolutionH.DotID; j <= ConvolutionH.DotID; j++) {
                                     ValueH += ConvolutionH.DotArray[j];
@@ -852,9 +852,9 @@ var ConvolutionY = new Vue({
                 ConvolutionY.DotArray[i] = 0;
             }
 
-            for(let n=-ConvolutionX.DotID;n<=ConvolutionX.DotID;n++){
+            for(let n=-ConvolutionY.DotID;n<=ConvolutionY.DotID;n++){
                 for(let k=-ConvolutionY.DotID;k<=ConvolutionY.DotID;k++){
-                    if(!isNaN(ConvolutionX.DotArray[n-k])&&!isNaN(ConvolutionX.DotArray[k]))
+                    if(!isNaN(ConvolutionH.DotArray[n-k])&&!isNaN(ConvolutionX.DotArray[k]))
                         ConvolutionY.DotArray[n]+=ConvolutionX.DotArray[k] * ConvolutionH.DotArray[n-k];
                 }
             }
