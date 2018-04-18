@@ -591,7 +591,7 @@ var Terminal = new Vue({
                         Terminal.TerminalText.push(Terminal.NowText);
                     }
                 }else{
-                    console.log("Error");
+                    Terminal.TerminalText.push("[Error21 錯誤指令] " + Terminal.NowText);
                 }
 
                 while(Terminal.TerminalCounter>11){
