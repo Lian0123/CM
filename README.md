@@ -1,9 +1,6 @@
 ## Project介紹：
  本專案名為Convolution Machine，即蜷曲運算機器，用於數學類上的運算的程式，預設執行於Ubuntu平台上。
  預設啟動指令 ./start.sh
- 
-## 注意：
- node_modules底下檔案不屬於本專案MIT LICENSES所包含的範圍，預計下次git push時會移除並用package.json打包好
 
 ## 版本差異：
  本專案為完整版專案，但已打包好的zip檔是屬於精簡版（無輸出成專有格式的功能）
